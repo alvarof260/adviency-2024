@@ -8,7 +8,11 @@ export default {
     fontFamily: {
       roboto: ["roboto", "serif"],
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'hero-pattern': "url('./src/assets/Christmas-seamless-pattern-vector-design-Graphics-36165377-1.jpg')"
+      }
+    },
   },
   plugins: [],
 }
