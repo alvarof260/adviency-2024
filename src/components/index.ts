@@ -1,1 +1,5 @@
 export * from "./Hero/Hero"
+export * from "./GiftSection/GiftSection"
+export * from "./GiftItem/GiftItem"
+export * from "./GiftList/GiftList"
+export * from "./UI/index"

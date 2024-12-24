@@ -1,9 +1,12 @@
-import { Hero } from "./components"
+import { GiftList, GiftSection, Hero, Title } from "./components"
 
 function App() {
   return (
     <Hero>
-      <h1>Hello world!</h1>
+      <Title text="Lista de regalos" />
+      <GiftSection>
+        <GiftList />
+      </GiftSection>
     </Hero>
   )
 }
