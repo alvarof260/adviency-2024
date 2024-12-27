@@ -6,7 +6,7 @@ interface Props {
 
 export const Hero = ({ children }: Props) => {
   return (
-    <main className="h-screen bg-hero-pattern flex flex-col justify-center items-center">
+    <main className="h-screen w-screen bg-red-700 flex flex-col justify-center items-center gap-8">
       {children}
     </main>
   )

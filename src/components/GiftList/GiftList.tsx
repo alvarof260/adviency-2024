@@ -1,11 +1,16 @@
+import { Gift } from "../../types"
 import { GiftItem } from "../index.ts"
 
-export const GiftList = () => {
+interface Props {
+  gifts: Gift[]
+}
+
+export const GiftList = ({ gifts }: Props) => {
   return (
-    <ul>
-      <GiftItem name="Play 5" />
-      <GiftItem name="Xbox X" />
-      <GiftItem name="Pelota" />
+    <ul className="flex flex-col max-h-80 overflow-hidden overflow-y-scroll">
+      {gifts.map((gift) => (
+        <GiftItem name={gift.name} key={gift.id} />
+      ))}
     </ul>
   )
 }
