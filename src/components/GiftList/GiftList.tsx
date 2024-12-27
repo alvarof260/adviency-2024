@@ -1,16 +1,13 @@
-import { Gift } from "../../types"
-import { GiftItem } from "../index.ts"
+import { ReactNode } from "react"
 
 interface Props {
-  gifts: Gift[]
+  children: ReactNode;
 }
 
-export const GiftList = ({ gifts }: Props) => {
+export const GiftList = ({ children }: Props) => {
   return (
     <ul className="flex flex-col max-h-80 overflow-hidden overflow-y-scroll">
-      {gifts.map((gift) => (
-        <GiftItem name={gift.name} key={gift.id} />
-      ))}
+      {children}
     </ul>
   )
 }

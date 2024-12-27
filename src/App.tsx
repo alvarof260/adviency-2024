@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { GiftForm, GiftList, Hero, Title } from "./components"
+import { GiftForm, GiftList, GiftItem, Hero } from "./components"
 import { Gift } from "./types"
 
 function App() {
@@ -11,11 +11,19 @@ function App() {
     setGifts(newState)
   }
 
+  const deleteGift = (id: number) => {
+    const newState = gifts.filter((gift) => gift.id != id);
+    setGifts(newState);
+  }
+
   return (
     <Hero>
-      <Title text="Lista de regalos" />
       <GiftForm addGift={addGift} />
-      <GiftList gifts={gifts} />
+      <GiftList>
+        {gifts.map((gift) => (
+          <GiftItem gift={gift} key={gift.id} deleteGift={deleteGift} />
+        ))}
+      </GiftList >
     </Hero>
   )
 }
